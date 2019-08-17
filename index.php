@@ -22,10 +22,25 @@ class Country {
         $this->year_of_indepence = $object_parameters['independence'] ; 
     }
     public function get_economy() {
+        //Introduce exception handling here
+        if (($this->population/$this->size) < 200){
+            echo('Bad economy') ; 
+        }else {
+            echo('Good economy') ; 
+        }
+   }
         
-    }
-
-    }
-
 }
+$country = array(
+    'name' => 'Nigeria' ,
+    'population' => 20000000 , 
+    'size' => 30000 ,
+    'continent' => 'Africa' , 
+    'region' => 'West' ,
+    'capital' => 'Nigeria' , 
+    'colonial' => 'England' , 
+    'independence' => 1960
+) ; 
+$nigeria = new Country($country) ; 
+$nigeria->get_economy() ; 
 ?>
