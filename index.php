@@ -21,6 +21,9 @@ class Country {
         $this->colonial_thieves = $object_parameters['colonial'] ; 
         $this->year_of_indepence = $object_parameters['independence'] ; 
     }
+    public function get_economy() {
+        
+    }
 
     }
 
